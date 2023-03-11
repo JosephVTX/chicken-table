@@ -7,6 +7,7 @@ const browls = [
 
   {
     nombre: "Chicken Salad",
+
     check: [
       "gluten",
       "huevo",

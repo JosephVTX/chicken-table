@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 
-  important: "#tablaAlergenos > #alergenos",
+  important: "#tablaAlergenos",
   future: {
 
     removeDeprecatedGapUtilities: true,

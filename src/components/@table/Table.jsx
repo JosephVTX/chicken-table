@@ -50,7 +50,7 @@ const Icon = ({ alergeno, filterArr, setFilterArr, title }) => {
         hidden
       />
 
-      <span className="lg:hidden text-black text-center w-full">{alergeno.name}</span>
+      <span className="lg:hidden text-black text-center max-w-[12ch]">{alergeno.name}</span>
     </div>
   ) : (
     <span className="flex px-2 text-[#FF0000]">{title ?? "Platos"}</span>
@@ -76,10 +76,11 @@ export default function Table({ title, platosArr }) {
   return (
     <table className="border mx-auto w-full max-lg:border-none">
       <thead className="border-b-[1px] border-gray-200 ">
-        <tr className="max-lg:border max-lg:grid max-sm:grid-cols-4 grid-cols-5 mb-4">
+        <tr className="max-lg:flex flex-wrap justify-evenly mb-4">
           {AlergenosConfig.map((alergeno, index) => (
             <th className=" px-2 py-4 max-lg:first:hidden bg-transparent" key={index}>
               <Icon
+               
                 title={title}
                 filterArr={filterArr}
                 setFilterArr={setFilterArr}
@@ -111,7 +112,7 @@ export default function Table({ title, platosArr }) {
                   return index === 0 ? (
                     <td
                       className="max-lg:hidden lg:w-[180px]  p-1 border-[1px] border-gray-200    min-[1000px]:p-4"
-                      key={index}
+                      key={`${index}x`}
                     >
                       <a
                         href={entrante?.href ?? "#"}
